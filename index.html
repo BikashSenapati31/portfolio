@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/17c24a02c9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- Replace the IMG tag with VIDEO tag here -->
+          <video class="logo" autoplay muted loop>
+            <source src="videos/Bikash2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+
+          <!-- Mobile Menu -->
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">contact</a></li>
+            <!-- Close icon inside menu -->
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
+          </ul>
+
+          <!-- Hamburger icon -->
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Aspiring Software Developer</p>
+          <h1>
+            Hi, I'm
+            <span>Bikash</span>
+            <br />
+            <span>Senapati</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!------------- About Section ---------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am an aspiring Software Developer passionate about building
+              scalable, efficient, and user-friendly applications. With a solid
+              foundation in core computer science concepts and practical
+              experience in web development and databases, I am ready to
+              contribute to impactful projects and grow as a developer.
+            </p>
+
+            <div class="tab-titles">
+              <p
+                class="tab-links active-link"
+                onclick="opentab(event, 'Skills')"
+              >
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab(event, 'Education')">
+                Education
+              </p>
+              <p class="tab-links" onclick="opentab(event, 'Projects')">
+                Projects
+              </p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li>
+                  <span>Languages:</span>
+                  <br />
+                  Java, JavaScript, SQL
+                </li>
+                <li>
+                  <span>Web Technologies:</span>
+                  <br />
+                  HTML5, CSS3, PHP
+                </li>
+                <li>
+                  <span>Databases:</span>
+                  <br />
+                  MySQL
+                </li>
+                <li>
+                  <span>Tools & Frameworks:</span>
+                  <br />
+                  Git, Apache Tomcat, VS Code
+                </li>
+                <li>
+                  <span>Core Concepts:</span>
+                  <br />
+                  OOP, Data Structures and Algorithms, MVC Architecture
+                </li>
+              </ul>
+            </div>
+
+            <!-- Education Section -->
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>Secondary (CBSE):</span>
+                  <br />
+                  Oriental Public School, Bolangir
+                  <br />
+                  Apr 2018 – May 2019
+                </li>
+                <li>
+                  <span>Senior Secondary (CBSE):</span>
+                  <br />
+                  Chandra Sekharpur Academy, Puri
+                  <br />
+                  Apr 2019 – May 2021
+                </li>
+                <li>
+                  <span>B.Tech in Computer Science and Engineering:</span>
+                  <br />
+                  Trident Academy of Technology, Bhubaneswar
+                  <br />
+                  Dec 2021 – May 2025
+                </li>
+              </ul>
+            </div>
+            <!-- Portfolio Tab -->
+            <div class="tab-contents" id="Projects">
+              <ul>
+                <li>
+                  <span>Edu Mate</span>
+                  <br />
+                  <strong>Interactive Educational Platform</strong>
+                  (Java, MySQL, PHP, HTML, CSS, JavaScript)
+                  <br />
+                  - Built a full-stack educational platform with gamified
+                  learning tools and video content.
+                  <br />
+                  - Developed backend features for user authentication, content
+                  management, and session tracking.
+                  <br />
+                  - Designed a responsive, dynamic front-end for an engaging
+                  user experience.
+                </li>
+
+                <li>
+                  <span>Employee Management System</span>
+                  <br />
+                  <strong>Comprehensive Record Management</strong>
+                  (Java, HTML, CSS, SQL)
+                  <br />
+                  - Built a system to manage employee data with add, update,
+                  delete, and search functionality.
+                  <br />
+                  - Implemented backend logic using Java and integrated database
+                  operations with SQL.
+                  <br />
+                  - Created a clean, responsive UI for smooth and efficient
+                  interaction.
+                </li>
+
+                <li>
+                  <span>Portfolio Website</span>
+                  <br />
+                  <strong>Personal Portfolio Showcase</strong>
+                  (HTML, CSS, JavaScript)
+                  <br />
+                  - Designed and developed a personal portfolio to highlight
+                  projects and skills.
+                  <br />
+                  - Built with a mobile-first approach for full responsiveness.
+                  <br />
+                  - Integrated smooth animations and dynamic content switching.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------Services------------------------>
+    <div class="services" id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>
+              Building responsive and dynamic websites using HTML, CSS,
+              JavaScript, and PHP.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-crop-simple"></i>
+            <h2>Backend Development</h2>
+            <p>
+              Creating scalable backend systems using Java, MySQL, and Apache
+              Tomcat.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>Software Development</h2>
+            <p>
+              Developing software solutions using OOP principles and MVC
+              architecture.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------projects--------------->
+    <div id="projects">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" />
+            <div class="layer">
+              <h3>Edu-Mate</h3>
+              <p>
+                An interactive educational platform with gamified learning,
+                video content, and dynamic UI. Features include user
+                authentication, content management, and session tracking using
+                Java and MySQL.
+              </p>
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" />
+            <div class="layer">
+              <h3>Employee Management System</h3>
+              <p>
+                A Java-based system to manage employee records with add, update,
+                delete, and search operations. Built with SQL integration and a
+                clean, responsive UI.
+              </p>
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-3.png" />
+            <div class="layer">
+              <h3>Portfolio Website</h3>
+              <p>
+                A personal portfolio website showcasing my projects, skills, and
+                experience. Built with HTML, CSS, and JavaScript for a
+                responsive design.
+              </p>
+              <a href="#">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+    <!--------------------contact--------------- -->
+    <div id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              senapatibikash168@gmail.com
+            </p>
+            <p>
+              <i class="fa-solid fa-phone"></i>
+              +91 8144194934
+            </p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/bikash-senapati/">
+                <i class="fa-brands fa-square-linkedin"></i>
+              </a>
+              <a href="mailto:senapatibikash168@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            <a href="document/BIKASH RESUME.pdf" download class="btn btn2">
+              Download CV
+            </a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">submit</button>
+            </form>
+
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; bikash senapati 2025 all right reserved</p>
+      </div>
+    </div>
+
+    <script>
+      // Tab switching
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(event, tabname) {
+        for (let tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (let tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu() {
+        sidemenu.style.right = "0";
+      }
+      function closemenu() {
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbynjIyxGQdMWefvO6kZ2Xv-5E2hpGc5aafZzBy9hCgh34s0Sr2kyzz_5fjeu2DR83UOjg/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
